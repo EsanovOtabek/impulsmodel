@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Impulsning saqlanish qonuni</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="content">
+    <div class="head">
+        <h2 class="title">Impulsning saqlanish qonuni</h2>
+
+    </div>
+
+    <div class="body">
+        <div class="border">
+            <div id="circle_1" class="circle">
+                <p id="m_1">0</p>
+            </div>
+
+            <div id="circle_2" class="circle">
+                <p id="m_2">0</p>
+            </div>
+        </div>
+        <div class="line"></div>
+    </div>
+
+    <div class="foot">
+        <div class="row">
+            <div class="col">
+                <label for="massa_1">1-shar massasi: </label>
+                <input type="number" id="massa_1" placeholder="M1" min="0" max="100" onkeyup="writer(1)">
+
+                <hr>
+
+                <label for="speed_1">1-shar tezligi: </label>
+                <input type="number" id="speed_1" placeholder="V1">
+
+            </div>
+
+            <div class="col">
+                <label for="massa_2">2-shar massasi: </label>
+                <input type="number" id="massa_2" placeholder="M2" min="0" max="100" onkeyup="writer(2)">
+
+                <hr>
+
+                <label for="speed_2">2-shar tezligi: </label>
+                <input type="number" id="speed_2" placeholder="V2">
+
+            </div>
+            <hr>
+            <div class="btn_center">
+                <p class="ass">Noelastik</p>
+                <label class="switch" >
+                    <input type="checkbox" id="isElastik">
+                    <span class="slider round"></span>
+                </label>
+                <p class="ass">Elastik</p>
+                <button class="btn_ok" onClick="start()">Boshlash</button>
+                <button class="btn_ok" onclick="stop()">Tozalash</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+<audio src="https://robocontest.uz/assets/sounds/fireworks.mp3" id="congratulationsSound"></audio>
+<script src="app.js"></script>
+
+</body>
+</html>
